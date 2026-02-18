@@ -39,7 +39,7 @@ const products: Product[] = [
     thumbnail: "/assets/images/main4.jpg",
     category: "care",
   },
-    {
+  {
     title: "Personal Support",
     link: "/services#home-care",
     thumbnail: "/assets/images/main4.jpg",
@@ -51,6 +51,30 @@ const products: Product[] = [
     thumbnail: "/assets/images/main4.jpg",
     category: "care",
   },
+  {
+    title: "Residential Cleaning",
+    link: "/services#cleaning",
+    thumbnail: "/assets/images/main1.jpg",
+    category: "cleaning",
+  },
+  {
+    title: "Deep Cleaning",
+    link: "/services#cleaning",
+    thumbnail: "/assets/images/main2.jpg",
+    category: "cleaning",
+  },
+  {
+    title: "Personal Support",
+    link: "/services#home-care",
+    thumbnail: "/assets/images/main4.jpg",
+    category: "care",
+  },
+    {
+    title: "Personal Support",
+    link: "/services#home-care",
+    thumbnail: "/assets/images/main4.jpg",
+    category: "care",
+  }
 ];
 
 

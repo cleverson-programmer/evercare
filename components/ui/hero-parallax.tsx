@@ -42,12 +42,12 @@ export const HeroParallax = ({
   const springConfig = { stiffness: 300, damping: 30 };
 
   const translateX = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, 1000]),
+    useTransform(scrollYProgress, [0, 0.6], [0, 1000]),
     springConfig
   );
 
   const translateXReverse = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, -1000]),
+    useTransform(scrollYProgress, [0, 0.6], [0, -1000]),
     springConfig
   );
 
@@ -84,7 +84,17 @@ export const HeroParallax = ({
       duration: 0.6,
       ease: "easeInOut",
     }}
-    className="h-[300vh] py-40 overflow-hidden relative flex flex-col [perspective:1000px]"
+    className="
+      h-[170vh]
+      min-[820px]:h-[200vh]
+      min-[1440px]:h-[300vh]
+      py-40
+      overflow-hidden
+      relative
+      flex
+      flex-col
+      [perspective:1000px]
+    "
     >
       <Header
         selectedService={selectedService}

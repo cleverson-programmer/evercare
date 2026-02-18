@@ -34,7 +34,7 @@ const items = [
         firstImage="/assets/images/main1.jpg"
         secondImage="/assets/images/main2.jpg"
         slideMode="hover"
-        className="rounded-xl"
+        className="w-full h-[60%] max-[430px]:h-[65%] rounded-xl"
       />
     ),
     className: "md:col-span-2",
@@ -49,7 +49,7 @@ const items = [
         secondImage="/assets/images/main2.jpg"
         slideMode="drag"
         showHandlebar
-        className="rounded-xl"
+        className="w-full h-[60%] max-[430px]:h-[65%] rounded-xl"
       />
     ),
     className: "md:col-span-1",
@@ -64,7 +64,7 @@ const items = [
         secondImage="/assets/images/main2.jpg"
         slideMode="drag"
         showHandlebar
-        className="rounded-xl"
+        className="w-full h-[60%] max-[430px]:h-[65%] rounded-xl"
       />
     ),
     className: "md:col-span-1",
@@ -78,7 +78,7 @@ const items = [
         firstImage="/assets/images/main1.jpg"
         secondImage="/assets/images/main2.jpg"
         slideMode="hover"
-        className="rounded-xl"
+        className="w-full h-[60%] max-[430px]:h-[65%] rounded-xl"
       />
     ),
     className: "md:col-span-2",
