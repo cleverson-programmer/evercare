@@ -1,12 +1,7 @@
 import { generateSEO } from "@/lib/seo"
-import Header from "@/components/layout/Header"
-import Main from "@/components/layout/Main"
-import { HomeBentoSection } from "@/components/layout/HomeBentoSection"
-import PricingSection from "@/components/layout/PricingSection"
-import TestimonialsSection from "@/components/layout/CommentSection"
-import StatsSection from "@/components/layout/StatsSection"
-import ContactFAQSection from "@/components/layout/ContactFAQSection"
+import ServicesCards from "@/components/layout/ServicesCards"
 import Footer from "@/components/layout/Footer"
+import Navbar from "@/components/common/Navbar"
 
 export const metadata = generateSEO({
   title: "Professional Cleaning Services in USA",
@@ -36,13 +31,8 @@ export default function LandingPage() {
           __html: JSON.stringify(structuredData),
         }}
       />
-      <Header />
-      <Main />
-      <HomeBentoSection />
-      <PricingSection />
-      <TestimonialsSection />
-      <StatsSection />
-      <ContactFAQSection />
+      <Navbar  />
+      <ServicesCards />
       <Footer />
     </>
   )

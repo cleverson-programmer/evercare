@@ -1,12 +1,12 @@
-import { generateSEO } from "@/lib/seo"
-import Header from "@/components/layout/Header"
-import Main from "@/components/layout/Main"
-import { HomeBentoSection } from "@/components/layout/HomeBentoSection"
-import PricingSection from "@/components/layout/PricingSection"
-import TestimonialsSection from "@/components/layout/CommentSection"
-import StatsSection from "@/components/layout/StatsSection"
-import ContactFAQSection from "@/components/layout/ContactFAQSection"
+import Navbar from "@/components/common/Navbar"
+import CTASection from "@/components/layout/about/CTASection"
+import HeroSection from "@/components/layout/about/HeroSection"
+import MissionSection from "@/components/layout/about/MissionSection"
+import PillarsSection from "@/components/layout/about/PillarsSection"
+import StickyScrollSection from "@/components/layout/about/StickyScrollSection"
+import TimelineSection from "@/components/layout/about/TimelineSection"
 import Footer from "@/components/layout/Footer"
+import { generateSEO } from "@/lib/seo"
 
 export const metadata = generateSEO({
   title: "Professional Cleaning Services in USA",
@@ -36,14 +36,16 @@ export default function LandingPage() {
           __html: JSON.stringify(structuredData),
         }}
       />
-      <Header />
-      <Main />
-      <HomeBentoSection />
-      <PricingSection />
-      <TestimonialsSection />
-      <StatsSection />
-      <ContactFAQSection />
+      <main className="min-h-screen">
+      <Navbar />
+      <HeroSection />
+      <MissionSection />
+      <StickyScrollSection />
+      <TimelineSection />
+      <PillarsSection />
+      <CTASection />
       <Footer />
+    </main>
     </>
   )
 }
