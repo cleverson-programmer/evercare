@@ -9,17 +9,18 @@ import {
 } from "motion/react";
 import { ServiceToggle } from "@/components/common/ServiceToggle";
 
-type ServiceType = "cleaning" | "care";
+export type ServiceType = "cleaning" | "care";
+export interface Product {
+  title: string;
+  link: string;
+  thumbnail: string;
+  category: ServiceType;
+}
 
 export const HeroParallax = ({
   products,
 }: {
-  products: {
-    title: string;
-    link: string;
-    thumbnail: string;
-    category: ServiceType;
-  }[];
+  products: Product[];
 }) => {
   const [selectedService, setSelectedService] =
     useState<ServiceType>("cleaning");

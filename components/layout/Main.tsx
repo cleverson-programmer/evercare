@@ -1,8 +1,8 @@
 "use client"
 
-import { HeroParallax } from "@/components/ui/hero-parallax"
+import { HeroParallax, Product } from "@/components/ui/hero-parallax"
 
-const products = [
+const products: Product[] = [
   {
     title: "Residential Cleaning",
     link: "/services#cleaning",
