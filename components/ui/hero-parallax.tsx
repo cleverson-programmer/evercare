@@ -74,27 +74,27 @@ export const HeroParallax = ({
   return (
     <motion.div
       ref={ref}
-    animate={{
-      backgroundColor:
-        selectedService === "care"
-          ? "#e1f1bb"
-          : "#F3F4F6", // azul claro atual (ajuste se quiser outro tom)
-    }}
-    transition={{
-      duration: 0.6,
-      ease: "easeInOut",
-    }}
-    className="
-      h-[170vh]
-      min-[820px]:h-[200vh]
-      min-[1440px]:h-[300vh]
-      py-40
-      overflow-hidden
-      relative
-      flex
-      flex-col
-      [perspective:1000px]
-    "
+      animate={{
+        backgroundColor:
+          selectedService === "care"
+            ? "#e1f1bb"
+            : "#F3F4F6", // azul claro atual (ajuste se quiser outro tom)
+      }}
+      transition={{
+        duration: 0.6,
+        ease: "easeInOut",
+      }}
+      className="
+        h-[170vh]
+        min-[820px]:h-[200vh]
+        min-[1440px]:h-[300vh]
+        py-40
+        overflow-hidden
+        relative
+        flex
+        flex-col
+        [perspective:1000px]
+      "
     >
       <Header
         selectedService={selectedService}

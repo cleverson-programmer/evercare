@@ -4,28 +4,28 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
-    question: "What is the purpose of this website?",
-    answer: "Our website provides high-quality products and services designed to help you achieve your goals efficiently.",
+    question: "What services does EverCare offer in Massachusetts?",
+    answer: "EverCare Home Services offers professional residential cleaning and home care services in Massachusetts. We specialize in residential cleaning, deep cleaning, move-in/move-out cleaning, and compassionate home care for seniors and those recovering at home.",
   },
   {
-    question: "How do I contact support?",
-    answer: "You can reach our support team via email at support@yoursaas.ai or call us at +1 (800) 123 XX21.",
+    question: "Can I combine cleaning and home care services in Massachusetts?",
+    answer: "Yes. Families choose EverCare because we offer integrated services from a single trusted provider. You can schedule routine residential cleaning along with daily or weekly home care to create a safe and hygienic environment.",
   },
   {
-    question: "How do I find the best products?",
-    answer: "Browse our curated collections or use the search feature to find exactly what you're looking for.",
+    question: "Are the cleaning and home care professionals trained?",
+    answer: "Absolutely. All our professionals undergo background and reference checks. Our cleaning team follows professional hygiene standards, while our home care assistants are trained to provide respectful and attentive assistance with daily tasks.",
   },
   {
-    question: "Can I return a product?",
-    answer: "Yes, we offer a 30-day return policy for all products in their original condition.",
+    question: "Do you bring your own cleaning supplies?",
+    answer: "Yes. For residential cleaning, we bring professional-grade products and equipment. For home care services, we coordinate with the family to ensure all personal hygiene items are available as needed.",
   },
   {
-    question: "Do you offer international shipping?",
-    answer: "Yes, we ship to over 100 countries worldwide with competitive shipping rates.",
+    question: "Which areas of Massachusetts do you serve?",
+    answer: "We proudly serve the entire state of Massachusetts and neighboring communities. If you're unsure if we cover your specific location, contact us at (508) 736-1263 for a prompt response.",
   },
   {
-    question: "How can I track my order?",
-    answer: "Once your order is shipped, you'll receive a tracking number via email to monitor your delivery.",
+    question: "How do I schedule cleaning or home care services in Massachusetts?",
+    answer: "Scheduling is simple: request a free quote through our website or call us directly. We will analyze your needs, recommend a customized service plan, and schedule a time that fits your routine.",
   },
 ];
 

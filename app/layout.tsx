@@ -3,14 +3,14 @@ import type { Metadata } from "next"
 import "./globals.css"
 import { Outfit, Fraunces } from "next/font/google";
 
-export const outfit = Outfit({
+const outfit = Outfit({
   subsets: ["latin"],
   weight: ["300", "400", "600", "700", "800"],
   variable: "--font-outfit",
   display: "swap",
 });
 
-export const fraunces = Fraunces({
+const fraunces = Fraunces({
   subsets: ["latin"],
   weight: ["600"],
   style: ["italic"],

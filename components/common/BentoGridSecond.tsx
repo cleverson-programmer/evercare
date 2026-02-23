@@ -4,17 +4,19 @@ import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { Compare } from "@/components/ui/compare";
 import { GiMagicBroom, GiFishBucket, GiVacuumCleaner } from "react-icons/gi";
 import { IoWaterSharp } from "react-icons/io5";
+
 export default function BentoGridSecond() {
   return (
-    <BentoGrid className="w-full md:auto-rows-[20rem]">
+    <BentoGrid>
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
           title={item.title}
           description={item.description}
           header={item.header}
-          className={item.className}
           icon={item.icon}
+          // Forçamos col-span-1 para que o grid controle o tamanho
+          className="col-span-1" 
         />
       ))}
     </BentoGrid>
@@ -31,13 +33,13 @@ const items = [
     description: "See the transformation after our professional deep cleaning service.",
     header: (
       <Compare
-        firstImage="/assets/images/main1.jpg"
-        secondImage="/assets/images/main2.jpg"
-        slideMode="hover"
-        className="w-full h-[60%] max-[430px]:h-[65%] rounded-xl"
-      />
+      firstImage="/assets/images/before1.jpeg"
+      secondImage="/assets/images/after1.jpeg"
+      slideMode="hover"
+      className="w-full h-full object-cover" // h-full agora preenche o container de 52rem do pai
+    />
     ),
-    className: "md:col-span-2",
+    className: "md:col-span-1",
     icon: <GiMagicBroom className="h-4 w-4 text-neutral-500" />,
   },
   {
@@ -45,11 +47,11 @@ const items = [
     description: "Professional kitchen cleaning results.",
     header: (
       <Compare
-        firstImage="/assets/images/main1.jpg"
-        secondImage="/assets/images/main2.jpg"
+        firstImage="/assets/images/before2.jpeg"
+        secondImage="/assets/images/after2.jpeg"
         slideMode="drag"
         showHandlebar
-        className="w-full h-[60%] max-[430px]:h-[65%] rounded-xl"
+        className="w-full h-full object-cover"
       />
     ),
     className: "md:col-span-1",
@@ -60,11 +62,11 @@ const items = [
     description: "Professional kitchen cleaning results.",
     header: (
       <Compare
-        firstImage="/assets/images/main1.jpg"
-        secondImage="/assets/images/main2.jpg"
+        firstImage="/assets/images/before3.jpeg"
+        secondImage="/assets/images/after3.jpeg"
         slideMode="drag"
         showHandlebar
-        className="w-full h-[60%] max-[430px]:h-[65%] rounded-xl"
+        className="w-full h-full object-cover"
       />
     ),
     className: "md:col-span-1",
@@ -75,14 +77,13 @@ const items = [
     description: "See the transformation after our professional deep cleaning service.",
     header: (
       <Compare
-        firstImage="/assets/images/main1.jpg"
-        secondImage="/assets/images/main2.jpg"
+        firstImage="/assets/images/before4.jpeg"
+        secondImage="/assets/images/after4.jpeg"
         slideMode="hover"
-        className="w-full h-[60%] max-[430px]:h-[65%] rounded-xl"
+        className="w-full h-full object-cover"
       />
     ),
-    className: "md:col-span-2",
+    className: "md:col-span-1",
     icon: <IoWaterSharp className="h-4 w-4 text-neutral-500" />,
   }
 ];
-

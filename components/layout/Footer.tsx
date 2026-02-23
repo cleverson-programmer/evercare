@@ -1,13 +1,10 @@
 "use client";
-import { Twitter, Linkedin, Github, Facebook, Instagram } from "lucide-react";
+import {Facebook, Instagram } from "lucide-react";
 import Image from "next/image";
 
-const footerLinks = ["Products", "Studio", "Clients", "Pricing", "Blog", "Privacy", "Terms"];
+const footerLinks = ["Home", "Services", "About", "Contact"];
 
 const socialLinks = [
-  { icon: Twitter, href: "#" },
-  { icon: Linkedin, href: "#" },
-  { icon: Github, href: "#" },
   { icon: Facebook, href: "#" },
   { icon: Instagram, href: "#" },
 ];
@@ -38,7 +35,7 @@ const Footer = () => {
               <a
                 key={link}
                 href="#"
-                className="text-sm text-footer-muted hover:text-white transition-colors"
+                className="text-sm text-footer-muted transition-colors"
               >
                 {link}
               </a>
@@ -57,7 +54,7 @@ const Footer = () => {
                 <a
                   key={i}
                   href={href}
-                  className="text-footer-muted hover:text-white transition-colors"
+                  className="text-footer-muted transition-colors"
                 >
                   <Icon className="w-5 h-5" />
                 </a>
@@ -76,7 +73,7 @@ const Footer = () => {
                     <a
                       key={link}
                       href="#"
-                      className="text-sm text-footer-muted hover:text-white transition-colors"
+                      className="text-sm text-footer-muted transition-colors"
                     >
                       {link}
                     </a>
@@ -88,7 +85,7 @@ const Footer = () => {
                     <a
                       key={i}
                       href={href}
-                      className="text-footer-muted hover:text-white transition-colors"
+                      className="text-footer-muted transition-colors"
                     >
                       <Icon className="w-5 h-5" />
                     </a>

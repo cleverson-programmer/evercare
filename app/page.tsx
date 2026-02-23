@@ -10,6 +10,8 @@ import TagsSection from "@/components/layout/TagsSection"
 import StatsSection from "@/components/layout/StatsSection"
 import ContactFAQSection from "@/components/layout/ContactFAQSection"
 import Footer from "@/components/layout/Footer"
+import ServicesMarquee from "@/components/layout/ServicesMarquee"
+import WhatsAppButton from "@/components/common/WhatsAppButton"
 
 export const metadata = generateSEO({
   title: "Professional Cleaning Services in USA",
@@ -42,6 +44,9 @@ export default function LandingPage() {
       <Header />
       <Main />
       <HomeBentoSection />
+      <div className="flex h-500px flex-col items-center justify-center bg-background dark:bg-background">
+        <ServicesMarquee />
+      </div>
       <PricingSection />
       <TestimonialsSection />
       <WeAreSection />
@@ -50,6 +55,7 @@ export default function LandingPage() {
       <StatsSection />
       <ContactFAQSection />
       <Footer />
+      <WhatsAppButton />
     </>
   )
 }

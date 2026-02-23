@@ -7,7 +7,7 @@ interface Review {
   name: string;
   content: string;
   rating: number;
-  photoUrl?: string; // opcional (Google API)
+  photoUrl?: string; //(Google API)
 }
 
 const reviews: Review[] = [
