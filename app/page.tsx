@@ -52,7 +52,7 @@ export default function LandingPage() {
       <WeAreSection />
       <AboutUsSection />
       <TagsSection />
-      <StatsSection />
+      {/* <StatsSection /> */}
       <ContactFAQSection />
       <Footer />
       <WhatsAppButton />

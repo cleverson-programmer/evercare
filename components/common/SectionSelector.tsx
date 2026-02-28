@@ -86,7 +86,7 @@ const SectionSelector = ({ selected, onSelect }: SectionSelectorProps) => {
               selected === "homecare" ? "text-secondary-foreground/80" : "text-muted-foreground"
             }`}
           >
-            Assistência domiciliar, cuidados paliativos e enfermagem
+            Professional In-Home Care You Can Trust in Massachusetts. Compassionate, dependable support designed to help seniors live safely and comfortably at home.
           </p>
         </motion.button>
       </div>

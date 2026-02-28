@@ -3,15 +3,34 @@
 import { Mail } from "lucide-react";
 
 const ContactSection = () => {
+
+  const phoneRaw = "15087361263"; // formato internacional
+  const phoneDisplay = "+1 (508) 736-1263";
+
+  const message =
+    "Hello, I came through the website and would like to request a quote.";
+
+  const WHATSAPP_URL = `https://wa.me/${phoneRaw}?text=${encodeURIComponent(
+    message
+  )}`;
+
+  const isMobile =
+    typeof window !== "undefined" &&
+    /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  const PHONE_URL = isMobile ? `tel:${phoneRaw}` : WHATSAPP_URL;
+
+  const GMAIL_URL =
+  "https://mail.google.com/mail/?view=cm&fs=1&to=homeservicesevercare@gmail.com";
   return (
     <section className="w-full px-6 py-20 md:px-16 lg:px-24">
       <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2">
         {/* Left - Info */}
         <div
           className="relative flex flex-col justify-center rounded-2xl 
-bg-background/100 backdrop-blur-md 
-border border-white/30 
-p-8"
+            bg-background/100 backdrop-blur-md 
+            border border-white/30 
+            p-8"
         >
           <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20">
             <Mail className="h-6 w-6 text-primary" />
@@ -30,9 +49,24 @@ p-8"
 
           {/* Contatos padrão */}
           <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-            <span>homeservicesevercare@gmail.com</span>
+            <a
+              href={GMAIL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              homeservicesevercare@gmail.com
+            </a>
+
             <span>•</span>
-            <span>+1 (508) 736-1263</span>
+
+            <a
+              href={PHONE_URL}
+              target={!isMobile ? "_blank" : undefined}
+              rel={!isMobile ? "noopener noreferrer" : undefined}
+              className="hover:text-foreground transition-colors"
+            >
+              {phoneDisplay}
+            </a>
           </div>
         </div>
 

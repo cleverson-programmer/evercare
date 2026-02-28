@@ -6,7 +6,7 @@ import { ChevronDown, LucideIcon } from "lucide-react";
 interface ServiceCardProps {
   icon: LucideIcon;
   title: string;
-  description: string;
+  description: string[];
   theme: "cleaning" | "homecare";
   children: React.ReactNode;
 }
@@ -36,21 +36,40 @@ const ServiceCard = ({ icon: Icon, title, description, theme, children }: Servic
       layout
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`bg-card rounded-xl shadow-card hover:shadow-card-hover transition-shadow border ${t.border} overflow-hidden`}
+      className={`bg-card rounded-xl shadow-card hover:shadow-card-hover transition-shadow border ${t.border} h-full flex flex-col justify-between`}
     >
+      {/* CONTEÚDO SUPERIOR */}
       <div className="p-5">
         <div className="flex items-start gap-4">
           <div className={`${t.iconBg} rounded-lg p-3 shrink-0`}>
             <Icon className={t.iconColor} size={24} />
           </div>
+
           <div className="flex-1 min-w-0">
-            <h3 className="font-bold text-foreground text-base mb-1">{title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+            <h3 className="font-bold text-foreground text-base mb-1">
+              {title}
+            </h3>
+
+            <ul className="mt-3 space-y-2">
+              {description.map((item: string, index: number) => (
+                <li
+                  key={index}
+                  className="text-sm text-muted-foreground flex items-start gap-2"
+                >
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-homecare shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
+      </div>
+
+      {/* BOTÃO SEMPRE NA PARTE INFERIOR */}
+      <div className="p-5 pt-0">
         <button
           onClick={() => setExpanded(!expanded)}
-          className={`mt-4 w-full flex cursor-pointer items-center justify-center gap-2 
+          className={`w-full flex cursor-pointer items-center justify-center gap-2 
           py-2.5 px-4 rounded-lg text-sm font-semibold transition-all duration-300
           ${
             expanded
@@ -68,6 +87,7 @@ const ServiceCard = ({ icon: Icon, title, description, theme, children }: Servic
         </button>
       </div>
 
+      {/* FORMULÁRIO */}
       <AnimatePresence>
         {expanded && (
           <motion.div
@@ -75,16 +95,16 @@ const ServiceCard = ({ icon: Icon, title, description, theme, children }: Servic
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="overflow-hidden"
+            className="overflow-hidden border-t border-border"
           >
-            <div className="px-5 pb-5 pt-2 border-t border-border">
+            <div className="px-5 pb-5 pt-4">
               {children}
             </div>
           </motion.div>
         )}
       </AnimatePresence>
     </motion.div>
-  );
+  )
 };
 
 export default ServiceCard;

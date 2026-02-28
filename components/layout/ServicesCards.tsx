@@ -10,6 +10,7 @@ import {
   Blinds,
   Stethoscope,
   Heart,
+  Brain,
   Syringe,
   HandHelping,
 } from "lucide-react";
@@ -23,66 +24,112 @@ type Section = "cleaning" | "homecare" | null;
 const cleaningServices = [
   {
     icon: Home,
-    title: "Limpeza Doméstica (Residencial)",
-    description:
-      "Tarefas rotineiras como varrer, passar pano, tirar pó de móveis, limpar banheiros e cozinhas.",
+    title: "Residential Cleaning",
+    description: [
+      "• Routine sweeping and mopping",
+      "• Dusting furniture and surfaces",
+      "• Bathroom sanitization",
+      "• Kitchen cleaning",
+    ],
   },
   {
     icon: Search,
-    title: "Limpeza Profunda (Deep Cleaning)",
-    description:
-      "Limpeza minuciosa em áreas difíceis: atrás de eletrodomésticos, rodapés, mofo e desinfecção total.",
+    title: "Deep Cleaning",
+    description: [
+      "• Cleaning behind appliances",
+      "• Baseboards and detailed areas",
+      "• Mold removal",
+      "• Full disinfection treatment",
+    ],
   },
   {
     icon: Building2,
-    title: "Limpeza Comercial / Escritórios",
-    description:
-      "Organização de mesas, limpeza de carpetes, pisos, banheiros, recepções e áreas comuns.",
+    title: "Commercial / Office Cleaning",
+    description: [
+      "• Desk organization and sanitation",
+      "• Carpet cleaning",
+      "• Floor maintenance",
+      "• Restroom and common area cleaning",
+    ],
   },
   {
     icon: HardHat,
-    title: "Limpeza Pós-Obra / Reforma",
-    description:
-      "Remoção de poeira fina, restos de tinta, cimento, gesso e sujeira pesada após construções.",
+    title: "Post-Construction Cleaning",
+    description: [
+      "• Fine dust removal",
+      "• Paint and cement residue removal",
+      "• Debris cleanup",
+      "• Heavy-duty cleaning",
+    ],
   },
   {
     icon: Factory,
-    title: "Limpeza Técnica / Industrial",
-    description:
-      "Métodos químicos, mecânicos ou térmicos para higienizar indústrias e áreas sensíveis.",
+    title: "Technical / Industrial Cleaning",
+    description: [
+      "• Chemical cleaning methods",
+      "• Mechanical sanitation processes",
+      "• Thermal cleaning techniques",
+      "• Sensitive area decontamination",
+    ],
   },
   {
     icon: Blinds,
-    title: "Limpeza Especializada",
-    description:
-      "Lavagem de janelas, carpetes, higienização de estofados e limpeza de áreas externas.",
+    title: "Specialized Cleaning",
+    description: [
+      "• Window washing",
+      "• Carpet cleaning",
+      "• Upholstery sanitization",
+      "• Outdoor area cleaning",
+    ],
   },
 ];
 
 const homeCareServices = [
   {
     icon: Stethoscope,
-    title: "Assistência Domiciliar",
-    description:
-      "Atendimentos de médicos, enfermeiros, fisioterapeutas, nutricionistas e terapeutas ocupacionais.",
+    title: "Personal Care Assistance",
+    description: [
+      "• Assistance with bathing and personal hygiene",
+      "• Assistance with dressing and grooming",
+      "• Bathroom and incontinence care",
+      "• Safe mobility and transfers",
+      "• Fall prevention support",
+      "• Positioning and comfort",
+    ],
   },
   {
-    icon: Heart,
-    title: "Cuidados Paliativos",
-    description:
-      "Conforto, alívio de sintomas e qualidade de vida com suporte psicológico e espiritual.",
-  },
-  {
-    icon: Syringe,
-    title: "Cuidados de Enfermagem",
-    description:
-      "Curativos complexos, medicação IV, aspiração de traqueostomia e monitoramento de sinais vitais.",
+    icon: Brain,
+    title: "Alzheimer’s & Memory Care Support",
+    description: [
+      "• Structured routine support",
+      "• Cognitive stimulation activities",
+      "• Safety supervision",
+      "• Redirection and calming techniques",
+      "• Behavioral support assistance",
+      "• Family communication updates",
+      "• Specialized dementia care delivered with patience, training, and understanding",
+    ],
   },
   {
     icon: HandHelping,
-    title: "Apoio de Cuidador",
-    description:
-      "Auxílio em higiene, alimentação e locomoção para idosos ou pessoas com limitações funcionais.",
+    title: "Daily Living Assistance",
+    description: [
+      "• Meal preparation and feeding assistance",
+      "• Medication reminders",
+      "• Light housekeeping related to care",
+      "• Appointment reminders",
+      "• Support with daily routines",
+    ],
+  },
+  {
+    icon: Syringe,
+    title: "Post-Surgical & Recovery Support",
+    description: [
+      "• Mobility assistance during recovery",
+      "• Support with daily activities",
+      "• General health condition monitoring",
+      "• Comfort-focused care assistance",
+    ],
   },
 ];
 
@@ -112,7 +159,7 @@ const ServicesCards = () => {
                   <div className="h-1 w-12 bg-cleaning rounded-full" />
                   <h2 className="text-2xl font-bold text-foreground">Cleaning Services</h2>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
                   {cleaningServices.map((service) => (
                     <ServiceCard
                       key={service.title}
@@ -141,7 +188,11 @@ const ServicesCards = () => {
               <div className="max-w-5xl mx-auto">
                 <div className="flex items-center gap-3 mb-8">
                   <div className="h-1 w-12 bg-homecare rounded-full" />
-                  <h2 className="text-2xl font-bold text-foreground">Home Care</h2>
+                  <h2 className="text-[1rem] font-normal text-foreground">When Extra Support at Home Becomes Necessary.
+                    Caring for a loved one can become physically and emotionally overwhelming.
+                    EverCare provides dependable in-home support designed to protect their safety, dignity, and independence.
+                    Our trained, background-checked caregivers are committed to delivering compassionate and professional care you can trust.
+                  </h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {homeCareServices.map((service) => (

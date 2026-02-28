@@ -70,15 +70,36 @@ export const Menu = ({
   children: React.ReactNode;
   isHovered: boolean;
 }) => {
+  const timeoutRef = React.useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setActive(null);
+    }, 500); // ⬅️ ajuste aqui (400–700ms ideal)
+  };
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+  };
+
+  React.useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
+
   return (
     <nav
-      onMouseLeave={() => setActive(null)}
+      onMouseLeave={handleMouseLeave}
+      onMouseEnter={handleMouseEnter}
       className={cn(
         "relative flex justify-center space-x-10 px-4 py-2 text-sm font-bold uppercase tracking-widest transition-colors duration-300",
-        // Lógica: No hover, usa a cor do tema (Preto no Light, Off-white no Dark)
-        isHovered 
-          ? "text-foreground" 
-          : "text-white"
+        isHovered ? "text-foreground" : "text-white"
       )}
     >
       {children}

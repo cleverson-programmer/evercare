@@ -62,7 +62,7 @@ export default function Header() {
       </h1>
 
       {/* SERVICE TOGGLE (Substituindo o parágrafo) */}
-      <div className="mt-10 w-full flex justify-center">
+      <div className="mt-10 mb-10 w-full z-9999 flex justify-center">
         <ServiceToggle 
           selected={selectedService} 
           onChange={(value) => setSelectedService(value)} 
