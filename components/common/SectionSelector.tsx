@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Sparkles, HeartPulse } from "lucide-react";
 
-type Section = "cleaning" | "homecare" | null;
+export type Section = "cleaning" | "homecare" | null;
 
 interface SectionSelectorProps {
   selected: Section;

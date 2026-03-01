@@ -22,9 +22,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <ServicePageClient service={service} />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }

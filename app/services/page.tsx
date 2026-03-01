@@ -1,7 +1,8 @@
 import { generateSEO } from "@/lib/seo"
-import ServicesCards from "@/components/layout/ServicesCards"
 import Footer from "@/components/layout/Footer"
 import Navbar from "@/components/common/Navbar"
+// Importe o novo componente interativo que criaremos abaixo
+import ServiceSectionManager from "@/components/layout/ServiceSectionManager"
 
 export const metadata = generateSEO({
   title: "Professional Cleaning Services in USA",
@@ -31,8 +32,12 @@ export default function LandingPage() {
           __html: JSON.stringify(structuredData),
         }}
       />
-      <Navbar  />
-      <ServicesCards />
+      <Navbar />
+      
+      <main className="min-h-screen bg-background">
+        <ServiceSectionManager />
+      </main>
+
       <Footer />
     </>
   )
