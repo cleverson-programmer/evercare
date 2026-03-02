@@ -22,6 +22,7 @@ import {
   Sofa,
 } from "lucide-react";
 import cleaningHero from "@/public/assets/images/cleaning-hero.jpg";
+import { HomeBentoSection } from "./HomeBentoSection";
 
 const FadeSection = ({
   children,
@@ -238,6 +239,10 @@ const CleaningServices = () => {
           </div>
         </div>
       </section>
+
+    <section>
+    <HomeBentoSection />
+    </section>
 
       {/* Why Trust */}
       <section className="bg-muted py-16">
