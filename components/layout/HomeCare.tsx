@@ -17,7 +17,6 @@ import {
   FileText,
   UserCheck,
 } from "lucide-react";
-import homecareHero from "@/public/assets/images/homecare-hero.jpg";
 
 const FadeSection = ({
   children,
@@ -170,7 +169,7 @@ const HomeCare = () => {
           <FadeSection delay={1} className="relative">
             <div className="rounded-2xl overflow-hidden shadow-card-hover">
               <img
-                src={homecareHero}
+                src="/assets/images/homecare-hero.jpg"
                 alt="Home care professional with client"
                 className="w-full h-72 lg:h-96 object-cover"
               />
@@ -247,7 +246,7 @@ const HomeCare = () => {
             <FadeSection delay={1}>
               <div className="rounded-2xl overflow-hidden shadow-card-hover">
                 <img
-                  src={homecareHero}
+                  src="/assets/images/homecare-hero.jpg"
                   alt="Caregiver providing compassionate care"
                   className="w-full h-80 object-cover object-top"
                 />

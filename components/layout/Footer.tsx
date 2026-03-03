@@ -54,8 +54,8 @@ export default function Footer() {
               <ul className="flex flex-col gap-1.5 text-xs text-background/60">
                 <li>Boston, MA 02101</li>
                 <li>Serving Greater Massachusetts</li>
-                <li>(617) 123-4567</li>
-                <li>care@evercare.com</li>
+                <li>(1) 508-736-1263</li>
+                <li>homeservicesevercare@gmail.com</li>
               </ul>
             </div>
             <div>

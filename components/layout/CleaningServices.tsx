@@ -21,7 +21,6 @@ import {
   Archive,
   Sofa,
 } from "lucide-react";
-import cleaningHero from "@/public/assets/images/cleaning-hero.jpg";
 import { HomeBentoSection } from "./HomeBentoSection";
 
 const FadeSection = ({
@@ -177,7 +176,7 @@ const CleaningServices = () => {
           <FadeSection delay={1} className="relative">
             <div className="rounded-2xl overflow-hidden shadow-card-hover">
               <img
-                src={cleaningHero}
+                src="/assets/images/cleaning-hero.jpg"
                 alt="Professional cleaning service"
                 className="w-full h-72 lg:h-96 object-cover"
               />
@@ -251,7 +250,7 @@ const CleaningServices = () => {
             <FadeSection>
               <div className="rounded-2xl overflow-hidden shadow-card-hover">
                 <img
-                  src={cleaningHero}
+                  src="/assets/images/cleaning-hero.jpg"
                   alt="EverCare team cleaning"
                   className="w-full h-72 lg:h-80 object-cover object-center"
                 />
